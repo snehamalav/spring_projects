@@ -1,0 +1,40 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+
+<bean id="c1"  class="hibernate.SpringApp1.model.Candidate" init-method="myInit" destroy-method="destroy">
+  <property name="name" value="sneha"/>
+  <property name="address" value="mahape"/>
+  <property name="age" value="22"/>
+</bean>
+
+<bean id="dao"  class="hibernate.SpringApp1.service.MathService" ></bean>
+<bean id="spc"  class="hibernate.SpringApp1.model.SpellChecker" ></bean>
+
+<bean id="te"  class="hibernate.SpringApp1.model.TextEditor">
+ <property name="sc" ref="spc"/> <!-- 
+<constructor-arg type="sc" ref="spc"/>  -->
+
+</bean>
+<bean id="department1"  class="hibernate.SpringApp1.model.Department" > <property name="name" value="java"/></bean>
+<bean id="e"  class="hibernate.SpringApp1.model.Employee" autowire="byType" > <property name="full_name" value="Akanksha"/></bean>
+
+<bean id="pt"  class="hibernate.SpringApp1.model.Product"  autowire="byName">
+<!-- <property name="pname" value="laptop"/>
+<property name="price" value="20000"/> -->
+ 
+<constructor-arg value="laptop"/>
+<constructor-arg value="20000"/>
+<constructor-arg value="ele"/>
+</bean>
+
+<bean id="pc"  class="hibernate.SpringApp1.model.ProductCategory">
+<!-- <property name="Product_Category" value="electronics"/>
+ -->
+ <constructor-arg value="electronics"/>
+</bean>
+
+</beans>
