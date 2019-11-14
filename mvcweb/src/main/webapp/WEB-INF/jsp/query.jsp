@@ -4,11 +4,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Register </title>
+<title>Insert title here</title>
 </head>
 <body>
-<b>${status}</b>
-<br>
-<b>${name}</b>
+<form action="makequery.do" method="post">
+
+Enter Your Name:<input type="text" name="name"> <br>
+Enter Your query here:
+<textarea name="info" rows="4" cols="10"></textarea><br>
+<input type="submit" >
+
+</form>
+
 </body>
 </html>

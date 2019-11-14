@@ -4,11 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Register </title>
+<title>Success</title>
 </head>
 <body>
-<b>${status}</b>
+Hi........
+${obj.name}
 <br>
-<b>${name}</b>
+${obj.info}
+is submitted.....Please wait for response...........
+
+<h1>Query Successfully Submitted!!!!!!!!!!!!!!!!!!!!!</h1>
 </body>
 </html>

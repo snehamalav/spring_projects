@@ -4,11 +4,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Register </title>
+<title>Akanksha</title>
 </head>
 <body>
-<b>${status}</b>
+<img src="img/b.jpg" height="40%" width="50%">
+${var1}
 <br>
-<b>${name}</b>
+${var2}
+<hr>
+<%
+String name=(String)request.getAttribute("var1");
+String address=(String)request.getAttribute("var2");
+%>
+<%=name %>
+<br>
+<%=address %>
 </body>
 </html>
